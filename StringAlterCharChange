@@ -1,0 +1,42 @@
+class StringAltCharChange
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		String temp="";
+		System.out.println("Enter the string: ");
+        String s1 = sc.nextLine();
+        String[] s2=s1.split(" ");
+        for(int i=1;i<s2.length;i+=2){
+            temp=s2[i];
+            s2[i]=result(temp);
+            
+        }
+        for(int i=0;i<s2.length;i++)
+        {
+            System.out.print(s2[i]+" ");
+        }
+        
+	}
+        
+        
+        public static String result(String t)
+        {
+            char c;
+            String t1="";
+            //System.out.print(t);
+            
+            for(int i=1;i<t.length();i++)
+            {
+               t1+=t.charAt(i);
+            }
+            int l=t.length()-2;
+           c=t.charAt(l);
+           
+           t1=c+t1;
+            return t1;
+            
+        
+      }
+}
