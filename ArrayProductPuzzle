@@ -1,0 +1,36 @@
+package p2;
+
+import java.util.Scanner;
+
+public class ArrayProductPuzzle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int t = 1;
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Enter size:");
+		int size = kb.nextInt();
+		System.out.println("Enter elements:");
+		int e[] = new int[size];
+		for (int i = 0; i < size; i++) {
+			e[i] = kb.nextInt();
+		}
+		int ele[] = new int[size];
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				if (i == j) {
+					continue;
+				} else {
+					t = t * e[j];
+				}
+			}
+			ele[i] = t;
+			t = 1;
+		}
+		for (int i = 0; i < size; i++) {
+			System.out.println(ele[i] + " ");
+		}
+
+	}
+
+}
